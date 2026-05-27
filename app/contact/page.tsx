@@ -16,6 +16,21 @@ const serviceOptions = [
   "Other",
 ];
 
+function formatPhone(value: string): string {
+  const digits = value.replace(/\D/g, "").slice(0, 10);
+  if (digits.length <= 3) return digits.length ? `(${digits}` : "";
+  if (digits.length <= 6) return `(${digits.slice(0, 3)}) ${digits.slice(3)}`;
+  return `(${digits.slice(0, 3)}) ${digits.slice(3, 6)}-${digits.slice(6)}`;
+}
+
+function isValidEmail(email: string): boolean {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.trim());
+}
+
+function isValidPhone(phone: string): boolean {
+  return phone.replace(/\D/g, "").length === 10;
+}
+
 export default function ContactPage() {
   const [form, setForm] = useState({
     name: "",
@@ -24,14 +39,34 @@ export default function ContactPage() {
     serviceType: "",
     message: "",
   });
+  const [touched, setTouched] = useState({ phone: false, email: false });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+    if (name === "phone") {
+      setForm((prev) => ({ ...prev, phone: formatPhone(value) }));
+    } else {
+      setForm((prev) => ({ ...prev, [name]: value }));
+    }
   };
+
+  const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
+    const { name } = e.target;
+    if (name === "phone" || name === "email") {
+      setTouched((prev) => ({ ...prev, [name]: true }));
+    }
+  };
+
+  const phoneError = touched.phone && form.phone && !isValidPhone(form.phone);
+  const emailError = touched.email && form.email && !isValidEmail(form.email);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Mark both as touched so errors show on submit
+    setTouched({ phone: true, email: true });
+    if (!isValidPhone(form.phone) || !isValidEmail(form.email)) return;
+
     setStatus("loading");
     try {
       const res = await fetch("/api/contact", {
@@ -42,6 +77,7 @@ export default function ContactPage() {
       if (res.ok) {
         setStatus("success");
         setForm({ name: "", phone: "", email: "", serviceType: "", message: "" });
+        setTouched({ phone: false, email: false });
       } else {
         setStatus("error");
       }
@@ -49,6 +85,13 @@ export default function ContactPage() {
       setStatus("error");
     }
   };
+
+  const inputClass = (hasError: boolean | "" | null | undefined) =>
+    `w-full border rounded-lg px-4 py-3 text-[#111827] text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition ${
+      hasError
+        ? "border-[#D42A22] focus:ring-[#D42A22]/40"
+        : "border-gray-300 focus:ring-[#5AB8E8]"
+    }`;
 
   return (
     <div className="min-h-screen bg-white">
@@ -104,7 +147,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       placeholder="John Smith"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-[#111827] text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5AB8E8] focus:border-transparent transition"
+                      className={inputClass(false)}
                     />
                   </div>
                   <div>
@@ -114,10 +157,14 @@ export default function ContactPage() {
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       required
                       placeholder="(706) 000-0000"
-                      className="w-full border border-gray-300 rounded-lg px-4 py-3 text-[#111827] text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5AB8E8] focus:border-transparent transition"
+                      className={inputClass(phoneError)}
                     />
+                    {phoneError && (
+                      <p className="text-[#D42A22] text-xs mt-1">Please enter a valid 10-digit phone number.</p>
+                    )}
                   </div>
                 </div>
 
@@ -128,10 +175,14 @@ export default function ContactPage() {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
+                    onBlur={handleBlur}
                     required
                     placeholder="you@example.com"
-                    className="w-full border border-gray-300 rounded-lg px-4 py-3 text-[#111827] text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#5AB8E8] focus:border-transparent transition"
+                    className={inputClass(emailError)}
                   />
+                  {emailError && (
+                    <p className="text-[#D42A22] text-xs mt-1">Please enter a valid email address (e.g. you@example.com).</p>
+                  )}
                 </div>
 
                 <div>
