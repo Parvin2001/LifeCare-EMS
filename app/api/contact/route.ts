@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
 
     await resend.emails.send({
       from: "LifeCare EMS Contact Form <onboarding@resend.dev>",
-      to: ["parvinbuxani@gmail.com"],
+      to: ["Tru@lifecareemsga.com"],
       replyTo: email,
       subject: `New Contact Form Submission — ${serviceType || "General Inquiry"}`,
       html: `
