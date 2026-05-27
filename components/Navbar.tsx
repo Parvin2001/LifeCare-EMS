@@ -6,9 +6,9 @@ import Image from "next/image";
 import { PHONE, PHONE_HREF } from "@/lib/data";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "About Us", href: "#about" },
-  { label: "Our Team", href: "#team" },
+  { label: "Services", href: "/#services" },
+  { label: "About Us", href: "/#about" },
+  { label: "Our Team", href: "/#team" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -19,7 +19,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#5AB8E8] border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-3">
-          <a href="#">
+          <a href="/">
             <div className="bg-white rounded-lg px-3 py-1.5">
               <Image
                 src="/images/logo.jpg"

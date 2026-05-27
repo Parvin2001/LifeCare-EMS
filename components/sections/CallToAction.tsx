@@ -20,7 +20,7 @@ export default function CallToAction() {
             Call Now — {PHONE}
           </a>
           <a
-            href="#contact"
+            href="/contact"
             className="flex items-center gap-2 border-2 border-white/60 hover:border-white text-white font-semibold px-8 py-4 rounded-md transition-colors text-base"
           >
             Contact Us
