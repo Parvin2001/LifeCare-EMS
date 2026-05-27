@@ -51,9 +51,9 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white">
       {/* Page header */}
-      <div className="bg-[#5AB8E8] py-16 text-center">
+      <div className="bg-[#5AB8E8] pt-36 pb-16 text-center">
         <p className="text-white/70 text-sm font-semibold tracking-widest uppercase mb-3">Get in Touch</p>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">Contact Us</h1>
         <p className="text-white/80 text-lg max-w-xl mx-auto">
