@@ -1,4 +1,4 @@
-import { ChevronRight, Shield, CheckCircle } from "lucide-react";
+import { ChevronRight, Shield, CheckCircle, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -29,13 +29,20 @@ export default function Hero() {
         </p>
 
         {/* CTA */}
-        <div className="flex items-center justify-center mb-14">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
           <a
             href="#services"
             className="flex items-center gap-2 bg-[#5AB8E8] hover:bg-[#3AAED8] text-white font-semibold px-8 py-4 rounded-md transition-colors text-base shadow-sm"
           >
             Request Transport
             <ChevronRight size={18} />
+          </a>
+          <a
+            href="/contact"
+            className="flex items-center gap-2 border-2 border-[#5AB8E8] text-[#5AB8E8] hover:bg-[#5AB8E8] hover:text-white font-semibold px-8 py-4 rounded-md transition-colors text-base"
+          >
+            <Mail size={18} />
+            Contact Us
           </a>
         </div>
 
