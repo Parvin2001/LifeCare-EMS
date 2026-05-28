@@ -75,11 +75,12 @@ export type TeamMember = {
   name: string;
   title: string;
   initials: string;
+  region?: string;
   email?: string;
   phone?: string;
 };
 
-export const team: TeamMember[] = [
+export const leadership: TeamMember[] = [
   {
     name: "Brian Haney",
     title: "Chief Executive Officer / Owner",
@@ -100,6 +101,36 @@ export const team: TeamMember[] = [
     phone: "(706) 921-9099",
   },
 ];
+
+export const regionalManagers: TeamMember[] = [
+  {
+    name: "Cal Hardwick",
+    title: "Regional Manager",
+    initials: "CH",
+    region: "Valdosta, Gray",
+    email: "Calvin@lifecareemsga.com",
+    phone: "(470) 998-9419",
+  },
+  {
+    name: "Carole Pence",
+    title: "Regional Manager",
+    initials: "CP",
+    region: "Habersham",
+    email: "Carole@lifecareemsga.com",
+    phone: "(706) 776-1526",
+  },
+  {
+    name: "Jenn Morgan",
+    title: "Regional Manager",
+    initials: "JM",
+    region: "Columbus, Byron, Phenix City",
+    email: "Jenn@lifecareemsga.com",
+    phone: "(762) 425-4319",
+  },
+];
+
+// Keep backward compat
+export const team: TeamMember[] = [...leadership, ...regionalManagers];
 
 export type Testimonial = {
   quote: string;
