@@ -1,7 +1,7 @@
 export const PHONE = "(706) 245-0689";
 export const PHONE_HREF = "tel:+17062450689";
 export const EMAIL = "info@lifecareemsga.com";
-export const ADDRESS = "North Georgia";
+export const ADDRESS = "Georgia & Alabama";
 
 export type Service = {
   icon: string;
