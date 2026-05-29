@@ -1,4 +1,4 @@
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, FileText } from "lucide-react";
 import Image from "next/image";
 import { PHONE, PHONE_HREF, ADDRESS } from "@/lib/data";
 
@@ -11,11 +11,12 @@ const serviceLinks = [
   "Long-Distance Transport",
 ];
 
-const certBadges = [
-  "State-Licensed EMS",
-  "HIPAA Compliant",
-  "Fully Insured",
-  "BLS & ALS Certified",
+const forms = [
+  {
+    label: "Notice of Privacy Practices",
+    href: "/forms/notice-of-privacy-practices.pdf",
+  },
+  // Additional forms coming soon
 ];
 
 export default function Footer() {
@@ -35,9 +36,9 @@ export default function Footer() {
               />
             </div>
             <p className="text-[#94A3B8] text-xs leading-relaxed mb-3">
-              North Georgia&apos;s trusted emergency and non-emergency medical transport provider. Patient-Focused &amp; Professionally Driven.
+              Georgia &amp; Alabama&apos;s trusted emergency and non-emergency medical transport provider. Patient-Focused &amp; Professionally Driven.
             </p>
-            <p className="text-[#94A3B8] text-xs">Licensed &amp; Insured in the State of Georgia</p>
+            <p className="text-[#94A3B8] text-xs">Licensed &amp; Insured in Georgia &amp; Alabama</p>
           </div>
 
           {/* Services */}
@@ -46,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {serviceLinks.map((s) => (
                 <li key={s}>
-                  <a href="#services" className="text-[#94A3B8] text-xs hover:text-[#5AB8E8] transition-colors">
+                  <a href="/#services" className="text-[#94A3B8] text-xs hover:text-[#5AB8E8] transition-colors">
                     {s}
                   </a>
                 </li>
@@ -73,16 +74,26 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Certifications */}
+          {/* Forms */}
           <div>
-            <h4 className="text-white font-semibold text-xs mb-4 tracking-wide uppercase">Certifications</h4>
-            <div className="flex flex-wrap gap-2">
-              {certBadges.map((badge) => (
-                <span key={badge} className="border border-white/20 text-[#94A3B8] text-xs px-2.5 py-1 rounded-full">
-                  {badge}
-                </span>
+            <h4 className="text-white font-semibold text-xs mb-4 tracking-wide uppercase">Forms</h4>
+            <ul className="space-y-3">
+              {forms.map((form) => (
+                <li key={form.label}>
+                  <a
+                    href={form.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-[#94A3B8] text-xs hover:text-[#5AB8E8] transition-colors"
+                  >
+                    <FileText size={13} className="text-[#5AB8E8] shrink-0" />
+                    {form.label}
+                  </a>
+                </li>
               ))}
-            </div>
+              {/* Placeholders for upcoming forms */}
+              <li className="text-[#94A3B8]/40 text-xs italic">More forms coming soon</li>
+            </ul>
           </div>
         </div>
       </div>

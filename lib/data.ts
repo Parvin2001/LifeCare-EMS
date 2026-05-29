@@ -67,7 +67,7 @@ export type Stat = {
 
 export const stats: Stat[] = [
   { value: "15+", label: "Years in Service", icon: "Clock" },
-  { value: "10,000+", label: "Transports Completed", icon: "Ambulance" },
+  { value: "60,000+", label: "Transports Done in 2025", icon: "Ambulance" },
   { value: "50+", label: "Counties Served", icon: "MapPin" },
 ];
 
@@ -92,13 +92,6 @@ export const leadership: TeamMember[] = [
     title: "Chief Operating Officer",
     initials: "TP",
     email: "Tru@lifecareemsga.com",
-  },
-  {
-    name: "Jonathan Herpst",
-    title: "Public Relations",
-    initials: "JH",
-    email: "Jonathan@lifecareemsga.com",
-    phone: "(706) 921-9099",
   },
 ];
 
@@ -129,8 +122,32 @@ export const regionalManagers: TeamMember[] = [
   },
 ];
 
+export const adminCompliance: TeamMember[] = [
+  {
+    name: "Jonathan Herpst",
+    title: "Public Relations",
+    initials: "JH",
+    email: "Jonathan@lifecareemsga.com",
+    phone: "(706) 921-9099",
+  },
+  {
+    name: "Grace Haney",
+    title: "Compliance (CAC CACO)",
+    initials: "GH",
+    email: "Grace@temsconsultants.com",
+    phone: "(706) 534-0536",
+  },
+  {
+    name: "Sierra Crowe",
+    title: "Human Resources Director",
+    initials: "SC",
+    email: "Sierra@temsconsultants.com",
+    phone: "(762) 425-4323",
+  },
+];
+
 // Keep backward compat
-export const team: TeamMember[] = [...leadership, ...regionalManagers];
+export const team: TeamMember[] = [...leadership, ...regionalManagers, ...adminCompliance];
 
 export type Testimonial = {
   quote: string;
@@ -165,5 +182,5 @@ export const features = [
   "BLS & ALS Certified Crews",
   "GPS-Tracked Fleet",
   "Fully Insured",
-  "Community-Focused Since 2009",
+  "Serving Georgia & Alabama Since 2009",
 ];

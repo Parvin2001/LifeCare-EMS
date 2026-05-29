@@ -60,7 +60,7 @@ export default function Hero() {
           <div className="hidden sm:block w-px h-4 bg-gray-300" />
           <div className="flex items-center gap-2">
             <CheckCircle size={15} className="text-[#5AB8E8]" />
-            15+ Years Serving North Georgia
+            15+ Years Serving Georgia &amp; Alabama
           </div>
         </div>
       </div>

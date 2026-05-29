@@ -269,7 +269,7 @@ export default function ContactPage() {
             <div className="bg-[#F7F8FA] border border-gray-200 rounded-xl p-6">
               <h3 className="text-[#111827] font-semibold text-base mb-3">Service Area</h3>
               <p className="text-gray-500 text-sm leading-relaxed">
-                Proudly serving patients and facilities across <strong className="text-[#111827]">North Georgia</strong> and surrounding counties for over 15 years.
+                Proudly serving patients and facilities across <strong className="text-[#111827]">Georgia and Alabama</strong> for over 15 years.
               </p>
               <a href="/#services" className="inline-flex items-center gap-1 text-[#5AB8E8] text-sm font-medium mt-3 hover:underline">
                 View all services <ChevronRight size={14} />
