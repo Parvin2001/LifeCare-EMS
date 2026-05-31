@@ -18,47 +18,47 @@ export const services: Service[] = [
     description:
       "Safe, reliable transport between hospitals, clinics, nursing homes, and medical facilities with certified crews on board.",
     details:
-      "Our inter-facility transport service moves patients safely between hospitals, clinics, skilled nursing facilities, and rehabilitation centers. Our crews manage every detail — from bed-to-stretcher transfers to coordinating with receiving staff — so transitions in care are smooth and stress-free. Whether it's a planned transfer or an urgent move, we're equipped and ready.",
+      "We recognize the critical importance of inter-facility transport in providing seamless continuity of care. Our team uses advanced equipment and highly trained professionals to ensure every transfer is timely, safe, and dignified — with a focus on patient comfort and well-being from start to finish.",
   },
   {
     icon: "Droplets",
     title: "Dialysis Transport",
     description:
-      "Dependable, on-time transport for dialysis patients to and from treatment centers — scheduled around your routine.",
+      "Dependable, on-time transport for dialysis patients to and from treatment centers — focused on comfort and care.",
     details:
-      "We provide reliable, on-time transport for dialysis patients — often multiple times per week. Our team handles loading, unloading, and patient positioning with care, ensuring comfort and safety throughout the trip. We build our schedule around your treatment routine so you never miss a session.",
+      "Our dialysis transport service is built around the needs of each patient. Our trained professionals handle everything — moving patients from bed to stretcher, loading and unloading from the ambulance, securing patients safely, and maintaining clean equipment — so every patient arrives at their treatment facility comfortable and on time.",
   },
   {
     icon: "HeartPulse",
     title: "Basic Life Support (BLS)",
     description:
-      "State-licensed BLS transport staffed by certified EMTs, equipped for non-critical medical transport needs.",
+      "BLS transport staffed by trained professionals, equipped to provide immediate assistance in critical situations.",
     details:
-      "Our state-licensed BLS units are staffed by certified EMTs trained to monitor vital signs, manage oxygen, and respond to changes in a patient's condition en route. Available 24/7, our BLS service covers non-critical but medically necessary transport — keeping patients safe and monitored from pickup to drop-off.",
+      "Our BLS service puts patient safety first. Our trained professionals are equipped to provide immediate, life-saving assistance in critical situations. Our team is continuously trained and prepared to respond effectively — delivering prompt, compassionate support and maintaining the highest standards of care on every call.",
   },
   {
     icon: "Heart",
     title: "Hospice Transport",
     description:
-      "Compassionate, dignified transport for hospice patients, coordinated closely with care teams and families.",
+      "Compassionate hospice care that honors the dignity and wishes of patients and their families.",
     details:
-      "We understand the sensitivity of end-of-life care. Our crews provide dignified, unhurried transport for hospice patients — working closely with families, care teams, and facilities to honor the patient's comfort and wishes at every step. We treat every hospice transport with the respect and compassion it deserves.",
+      "We provide compassionate hospice care that honors the dignity and wishes of our patients and their families during life's most challenging moments. Our team addresses physical, emotional, and spiritual needs — creating a peaceful, comforting environment where every individual is treated with the grace, understanding, and respect they deserve.",
   },
   {
     icon: "ShieldCheck",
     title: "Event EMS",
     description:
-      "On-site medical standby coverage for sporting events, concerts, film productions, and large public gatherings.",
+      "On-site medical coverage for sporting events, concerts, film productions, government functions, and more.",
     details:
-      "From high school football games to major concerts, film productions, and corporate events, our licensed EMTs and paramedics provide on-site medical standby coverage. We work with organizers ahead of time to assess risk, stage the right resources, and ensure immediate response if anyone needs medical attention during your event.",
+      "We provide experienced EMTs, paramedics, and firefighters for on-site medical coverage at sporting events, concerts, film productions, corporate events, government functions, conventions, and festivals. Our teams are positioned and ready to respond immediately if medical attention is needed at your event.",
   },
   {
     icon: "MapPin",
     title: "Long-Distance Transport",
     description:
-      "Interstate and out-of-state medical transport with continuous monitoring and experienced crew support throughout.",
+      "Interstate and out-of-state medical transport with experienced crew support for every mile of the journey.",
     details:
-      "When a patient needs to travel across state lines or hundreds of miles, our experienced crews provide continuous monitoring and clinical support the entire way. We coordinate with sending and receiving facilities, keep families informed throughout the journey, and ensure the patient arrives safely — no matter the distance.",
+      "For patients who need to travel across state lines or over long distances, our experienced crews are equipped to provide safe, reliable medical transport the entire way. We handle the logistics so patients and their families can focus on what matters most.",
   },
 ];
 
