@@ -1,4 +1,4 @@
-import { Phone, MapPin, FileText } from "lucide-react";
+import { Phone, MapPin, FileText, Facebook, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import { PHONE, PHONE_HREF, ADDRESS } from "@/lib/data";
 
@@ -16,7 +16,32 @@ const forms = [
     label: "Notice of Privacy Practices",
     href: "/forms/notice-of-privacy-practices.pdf",
   },
-  // Additional forms coming soon
+  {
+    label: "NEAT Form",
+    href: "/forms/neat-form.pdf",
+  },
+  {
+    label: "Blank PCS Form",
+    href: "/forms/lifecare-blank-pcs.pdf",
+  },
+];
+
+const socials = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/LifeacareEMS/",
+    icon: Facebook,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/lifecare.ems.ga/",
+    icon: Instagram,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/lifecare-ems-of-georgia",
+    icon: Linkedin,
+  },
 ];
 
 export default function Footer() {
@@ -38,7 +63,21 @@ export default function Footer() {
             <p className="text-[#94A3B8] text-xs leading-relaxed mb-3">
               Georgia &amp; Alabama&apos;s trusted emergency and non-emergency medical transport provider. Patient-Focused &amp; Professionally Driven.
             </p>
-            <p className="text-[#94A3B8] text-xs">Licensed &amp; Insured in Georgia &amp; Alabama</p>
+            <p className="text-[#94A3B8] text-xs mb-4">Licensed &amp; Insured in Georgia &amp; Alabama</p>
+            <div className="flex items-center gap-3">
+              {socials.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="text-[#94A3B8] hover:text-[#5AB8E8] transition-colors"
+                >
+                  <s.icon size={16} />
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Services */}
@@ -91,8 +130,6 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
-              {/* Placeholders for upcoming forms */}
-              <li className="text-[#94A3B8]/40 text-xs italic">More forms coming soon</li>
             </ul>
           </div>
         </div>
