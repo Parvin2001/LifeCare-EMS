@@ -1,15 +1,82 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown, ChevronUp, FileText, ExternalLink } from "lucide-react";
+import {
+  ChevronDown,
+  ChevronUp,
+  FileText,
+  ExternalLink,
+  MapPin,
+  DollarSign,
+  BookOpen,
+  Heart,
+  Users,
+} from "lucide-react";
 
 const APPLY_URL =
   "https://recruiting.paylocity.com/recruiting/jobs/All/36034039-ca9d-437b-9420-1b01f6c9bb23/Lifecare-EMS-of-Georgia-LLC";
+
+// ─── Why Work With Us ────────────────────────────────────────────────────────
+
+const perks = [
+  {
+    icon: DollarSign,
+    title: "Competitive Pay",
+    description:
+      "Compensation packages that reflect your experience, certifications, and commitment to patient care.",
+  },
+  {
+    icon: BookOpen,
+    title: "Ongoing Training",
+    description:
+      "We invest in your growth with continuous education, certification support, and hands-on development opportunities.",
+  },
+  {
+    icon: Heart,
+    title: "Make a Real Difference",
+    description:
+      "Every shift is an opportunity to positively impact lives across Georgia and Alabama.",
+  },
+  {
+    icon: Users,
+    title: "Supportive Team Culture",
+    description:
+      "Join a team of professionals who have your back on every call, in every situation.",
+  },
+];
+
+// ─── Hiring Process ──────────────────────────────────────────────────────────
+
+const steps = [
+  {
+    number: "01",
+    title: "Apply",
+    description: "Submit your application through our Paylocity careers portal — takes just a few minutes.",
+  },
+  {
+    number: "02",
+    title: "We Review",
+    description: "Our team carefully reviews your application and reaches out within a few business days.",
+  },
+  {
+    number: "03",
+    title: "Interview",
+    description: "Meet with our team to talk through the role, your experience, and what to expect.",
+  },
+  {
+    number: "04",
+    title: "Welcome Aboard",
+    description: "Get onboarded, meet your crew, and start making a difference from day one.",
+  },
+];
+
+// ─── Job Listings ────────────────────────────────────────────────────────────
 
 type Job = {
   title: string;
   overview: string;
   type: string;
+  location: string;
   responsibilities: { heading?: string; items: string[] }[];
   qualifications: string[];
   essentialFunctions: string[];
@@ -23,6 +90,7 @@ const jobs: Job[] = [
     overview:
       "Senior operational leader responsible for the performance, compliance, and strategic execution of multiple Lifecare EMS locations. Ensures operational excellence, supports company growth initiatives, and provides coaching and accountability for operational leaders.",
     type: "Full Time",
+    location: "Georgia & Alabama",
     responsibilities: [
       {
         heading: "Regional Operational Oversight",
@@ -78,6 +146,7 @@ const jobs: Job[] = [
     overview:
       "We are seeking a motivated operations manager who believes in treating every patient equally, has a high standard of professionalism, can problem solve, and understands the importance of team dynamics.",
     type: "Full Time",
+    location: "Georgia & Alabama",
     responsibilities: [
       {
         items: [
@@ -118,6 +187,7 @@ const jobs: Job[] = [
     overview:
       "We are seeking a dedicated operations specialist with a strong sense of leadership and a variety of skills to support our Lifecare team.",
     type: "Full Time",
+    location: "Georgia & Alabama",
     responsibilities: [
       {
         items: [
@@ -154,6 +224,7 @@ const jobs: Job[] = [
     overview:
       "We are seeking all levels of EMT/B/A/P to join our team. We are looking for self-starting EMTs who believe in treating every patient equally, have a high standard of professionalism, can problem solve, and understand team dynamics.",
     type: "Full Time",
+    location: "Georgia & Alabama",
     responsibilities: [
       {
         items: [
@@ -190,6 +261,7 @@ const jobs: Job[] = [
     overview:
       "We are seeking all levels of licensed EMTs to meet our dialysis and transport needs. We are looking for motivated applicants who prioritize patient care and professionalism, can problem solve, and understand team dynamics.",
     type: "Full Time",
+    location: "Georgia & Alabama",
     responsibilities: [
       {
         items: [
@@ -227,6 +299,7 @@ const jobs: Job[] = [
     overview:
       "We are seeking EMT-Rs to join our team to meet our dialysis and transport needs. We are looking for self-starting EMT-Rs who believe in treating every patient equally, have a high standard of professionalism, and understand team dynamics.",
     type: "Full Time",
+    location: "Georgia & Alabama",
     responsibilities: [
       {
         items: [
@@ -260,6 +333,7 @@ const jobs: Job[] = [
     overview:
       "We are seeking a dedicated EMT/B/A/P with a strong sense of leadership. This role primarily focuses on training new employees and supporting shift operations.",
     type: "Full Time",
+    location: "Georgia & Alabama",
     responsibilities: [
       {
         items: [
@@ -296,6 +370,7 @@ const jobs: Job[] = [
     overview:
       "Responsible for ensuring that all EMS operations comply with regulatory standards and internal policies. This role involves managing documentation, overseeing patient accounts, and ensuring overall compliance with healthcare regulations.",
     type: "Full Time",
+    location: "Georgia & Alabama (Remote Eligible)",
     responsibilities: [
       {
         heading: "Patient Account Management",
@@ -343,6 +418,7 @@ const jobs: Job[] = [
     overview:
       "We are seeking a dedicated QA Specialist to ensure our operations meet the highest quality and compliance standards, ultimately enhancing patient care and safety.",
     type: "Full Time",
+    location: "Georgia & Alabama (Remote Eligible)",
     responsibilities: [
       {
         items: [
@@ -374,6 +450,7 @@ const jobs: Job[] = [
     overview:
       "We are seeking a dedicated administrative support assistant. Although medical experience is a plus, it is not necessary. The ideal candidate should have excellent oral and written communication skills and be able to organize their work using tools like Microsoft Excel.",
     type: "Full Time",
+    location: "Georgia & Alabama",
     responsibilities: [
       {
         items: [
@@ -405,6 +482,7 @@ const jobs: Job[] = [
     overview:
       "Responsible for overseeing and enhancing the online presence of multiple affiliated companies specializing in private EMS transport, billing, and consulting services. This is a part-time position (approximately 10–20 hours per week) with flexible scheduling.",
     type: "Part Time (10–20 hrs/week)",
+    location: "Remote (Flexible)",
     responsibilities: [
       {
         items: [
@@ -438,6 +516,8 @@ const jobs: Job[] = [
   },
 ];
 
+// ─── Job Accordion ────────────────────────────────────────────────────────────
+
 function JobAccordion({ job }: { job: Job }) {
   const [open, setOpen] = useState(false);
 
@@ -450,9 +530,15 @@ function JobAccordion({ job }: { job: Job }) {
         <div className="flex items-start gap-4">
           <div className="mt-0.5">
             <h3 className="text-[#111827] font-semibold text-base">{job.title}</h3>
-            <span className="inline-block mt-1 text-xs font-medium text-[#5AB8E8] bg-[#5AB8E8]/10 px-2.5 py-0.5 rounded-full">
-              {job.type}
-            </span>
+            <div className="flex flex-wrap items-center gap-2 mt-1.5">
+              <span className="inline-block text-xs font-medium text-[#5AB8E8] bg-[#5AB8E8]/10 px-2.5 py-0.5 rounded-full">
+                {job.type}
+              </span>
+              <span className="flex items-center gap-1 text-xs text-gray-400">
+                <MapPin size={11} />
+                {job.location}
+              </span>
+            </div>
           </div>
         </div>
         <div className="shrink-0 ml-4 text-gray-400">
@@ -530,6 +616,8 @@ function JobAccordion({ job }: { job: Job }) {
   );
 }
 
+// ─── Page ─────────────────────────────────────────────────────────────────────
+
 export default function CareersPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -542,6 +630,53 @@ export default function CareersPage() {
         </p>
       </div>
 
+      {/* Why Work With Us */}
+      <div className="bg-[#F7F8FA] border-b border-gray-200 py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-[#D42A22] text-xs font-semibold tracking-widest uppercase mb-2">Why LifeCare EMS</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827]">Why Work With Us</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {perks.map((perk) => (
+              <div key={perk.title} className="bg-white border border-gray-200 rounded-xl p-6 text-center hover:border-[#5AB8E8]/40 hover:shadow-sm transition-all">
+                <div className="w-12 h-12 bg-[#5AB8E8]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <perk.icon size={22} className="text-[#5AB8E8]" />
+                </div>
+                <h3 className="text-[#111827] font-semibold text-sm mb-2">{perk.title}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">{perk.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Hiring Process */}
+      <div className="py-16 border-b border-gray-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-[#D42A22] text-xs font-semibold tracking-widest uppercase mb-2">Simple & Straightforward</p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#111827]">Our Hiring Process</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {steps.map((step, index) => (
+              <div key={step.number} className="relative flex flex-col items-center text-center">
+                {/* Connector line */}
+                {index < steps.length - 1 && (
+                  <div className="hidden lg:block absolute top-6 left-[calc(50%+28px)] right-[calc(-50%+28px)] h-px bg-gray-200" />
+                )}
+                <div className="w-12 h-12 rounded-full bg-[#5AB8E8] text-white font-bold text-sm flex items-center justify-center mb-4 relative z-10 shrink-0">
+                  {step.number}
+                </div>
+                <h3 className="text-[#111827] font-semibold text-sm mb-2">{step.title}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Job Listings */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Top CTA */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#F7F8FA] border border-gray-200 rounded-xl p-6 mb-10">
