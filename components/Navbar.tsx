@@ -11,6 +11,7 @@ const links = [
   { label: "Our Team", href: "/#team" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
+  { label: "Pay Bill", href: "https://lifecareems.secure.lq-pay.net", external: true },
 ];
 
 export default function Navbar() {
@@ -38,6 +39,7 @@ export default function Navbar() {
               <a
                 key={l.href}
                 href={l.href}
+                {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="text-sm text-black hover:text-white font-medium transition-colors"
               >
                 {l.label}
@@ -72,6 +74,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
+              {...(l.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="text-base text-black hover:text-white font-medium transition-colors"
             >
               {l.label}
