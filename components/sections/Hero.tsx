@@ -21,7 +21,8 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight mb-6">
-            Emergency &amp; Non-Emergency{" "}
+            Emergency &amp;{" "}
+            <span className="whitespace-nowrap">Non-Emergency</span>{" "}
             <span className="text-[#5AB8E8]">Medical Transport</span>{" "}
             Across Georgia
           </h1>
