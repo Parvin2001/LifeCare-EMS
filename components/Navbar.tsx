@@ -9,6 +9,7 @@ const links = [
   { label: "Services", href: "/#services" },
   { label: "About Us", href: "/#about" },
   { label: "Our Team", href: "/#team" },
+  { label: "Locations", href: "/locations" },
   { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
   { label: "Pay Bill", href: "https://lifecareems.secure.lq-pay.net", external: true },

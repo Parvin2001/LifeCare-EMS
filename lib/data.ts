@@ -203,3 +203,75 @@ export const features = [
   "Fully Insured",
   "Serving Georgia & Alabama Since 2009",
 ];
+
+// ─── Locations ────────────────────────────────────────────────────────────────
+// To add a new location: copy one object below and fill in the details.
+// lat/lng = GPS coordinates (search the address on maps.google.com,
+// right-click the pin → the numbers shown are lat, lng).
+
+export type Location = {
+  name: string;       // Display name shown in sidebar (e.g. "Valdosta")
+  address: string;    // Street address
+  city: string;       // City
+  state: string;      // 2-letter state code
+  zip: string;        // ZIP code
+  lat: number;        // Latitude  (decimal degrees)
+  lng: number;        // Longitude (decimal degrees, negative for USA)
+};
+
+export const locations: Location[] = [
+  {
+    name: "Valdosta",
+    address: "601 West Hill Ave",
+    city: "Valdosta",
+    state: "GA",
+    zip: "31601",
+    lat: 30.8376,
+    lng: -83.2887,
+  },
+  {
+    name: "Gray",
+    address: "4191 Gray Hwy",
+    city: "Gray",
+    state: "GA",
+    zip: "31032",
+    lat: 33.0084,
+    lng: -83.5349,
+  },
+  {
+    name: "Habersham",
+    address: "363 Baldwin Rd",
+    city: "Cornelia",
+    state: "GA",
+    zip: "30531",
+    lat: 34.5107,
+    lng: -83.5234,
+  },
+  {
+    name: "Columbus",
+    address: "9249 Veterans Pkwy",
+    city: "Midland",
+    state: "GA",
+    zip: "31820",
+    lat: 32.5350,
+    lng: -84.9196,
+  },
+  {
+    name: "Byron",
+    address: "102 Church St",
+    city: "Byron",
+    state: "GA",
+    zip: "31008",
+    lat: 32.6550,
+    lng: -83.7590,
+  },
+  {
+    name: "Phenix City",
+    address: "1178 U.S. Hwy 280",
+    city: "Phenix City",
+    state: "AL",
+    zip: "36867",
+    lat: 32.4698,
+    lng: -85.0024,
+  },
+];
