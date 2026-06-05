@@ -187,6 +187,12 @@ export const testimonials: Testimonial[] = [
     name: "Robert T.",
     relation: "Patient",
   },
+  {
+    quote:
+      "LifeCare consistently goes above and beyond to assist us with our transportation needs. Their teamwork, communication, and genuine concern for those we serve are truly exceptional. Knowing we can count on them gives us peace of mind and helps us better serve our residents and families.",
+    name: "Y. Pitts",
+    relation: "Healthcare Navigator, Autumn Lane Health & Rehabilitation",
+  },
 ];
 
 export const features = [
