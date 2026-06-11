@@ -171,27 +171,15 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "LifeCare was there when every second counted. The crew was calm, professional, and took incredible care of my father. I cannot thank them enough.",
-    name: "Sandra M.",
-    relation: "Family Member",
-  },
-  {
-    quote:
-      "We rely on LifeCare for all of our dialysis transport. They are reliable, punctual, and genuinely care about the patients they serve.",
-    name: "Dr. James K.",
-    relation: "Referring Physician",
-  },
-  {
-    quote:
-      "I was transported over 200 miles and the team made the entire journey comfortable and stress-free. Truly a world-class operation.",
-    name: "Robert T.",
-    relation: "Patient",
-  },
-  {
-    quote:
       "LifeCare consistently goes above and beyond to assist us with our transportation needs. Their teamwork, communication, and genuine concern for those we serve are truly exceptional. Knowing we can count on them gives us peace of mind and helps us better serve our residents and families.",
     name: "Y. Pitts",
     relation: "Healthcare Navigator, Autumn Lane Health & Rehabilitation",
+  },
+  {
+    quote:
+      "Life Care EMS has been a tremendous company to work with for transportation needs. They have exceptional customer service and always respond in a timely manner. There is no better transportation company than Life Care EMS. Thank you for all you do!",
+    name: "Staff",
+    relation: "Canterbury",
   },
 ];
 
