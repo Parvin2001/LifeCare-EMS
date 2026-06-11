@@ -178,7 +178,7 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       "Life Care EMS has been a tremendous company to work with for transportation needs. They have exceptional customer service and always respond in a timely manner. There is no better transportation company than Life Care EMS. Thank you for all you do!",
-    name: "Staff",
+    name: "Operations Manager",
     relation: "Canterbury",
   },
 ];
