@@ -118,14 +118,6 @@ export const regionalManagers: TeamMember[] = [
     phone: "(470) 998-9419",
   },
   {
-    name: "Carole Pence",
-    title: "Regional Manager",
-    initials: "CP",
-    region: "Habersham",
-    email: "Carole@lifecareemsga.com",
-    phone: "(706) 776-1526",
-  },
-  {
     name: "Jenn Morgan",
     title: "Regional Manager",
     initials: "JM",
@@ -145,7 +137,7 @@ export const adminCompliance: TeamMember[] = [
   },
   {
     name: "Grace Haney",
-    title: "Compliance (CAC CACO)",
+    title: "Chief of Compliance",
     initials: "GH",
     email: "Grace@temsconsultants.com",
     phone: "(706) 534-0536",
@@ -157,10 +149,111 @@ export const adminCompliance: TeamMember[] = [
     email: "Sierra@temsconsultants.com",
     phone: "(762) 425-4323",
   },
+  {
+    name: "Miruan Haney",
+    title: "Staff Accountant",
+    initials: "MH",
+    email: "miruanl@temsconsultants.com",
+  },
+  {
+    name: "Kristen Andrews",
+    title: "Director of Quality Assurance",
+    initials: "KA",
+    email: "kristen@lifecareems.com",
+  },
+  {
+    name: "Sal Gangi",
+    title: "Director of Education and Safety",
+    initials: "SG",
+    email: "sal@trinityemsga.com",
+  },
+];
+
+export const operationalManagers: TeamMember[] = [
+  {
+    name: "Carole Pence",
+    title: "Operational Manager",
+    initials: "CP",
+    region: "Habersham",
+    email: "carol@lifecareemsga.com",
+    phone: "(706) 776-1526",
+  },
+  {
+    name: "Doug Bennett",
+    title: "Operational Manager",
+    initials: "DB",
+    region: "Valdosta",
+    email: "dbennett@lifecareemsga.com",
+  },
+  {
+    name: "Brandy Cason",
+    title: "Operational Manager",
+    initials: "BC",
+    region: "Gray",
+    email: "brandy@lifecareemsga.com",
+  },
+  {
+    name: "Johnae Lucas",
+    title: "Operational Manager",
+    initials: "JL",
+    region: "Byron",
+    email: "johnae@lifecareemsga.com",
+  },
+  {
+    name: "Elise Chanthavongsack",
+    title: "Operational Manager",
+    initials: "EC",
+    region: "Columbus",
+    email: "elise@lifecareemsga.com",
+  },
+];
+
+export const operationalSpecialists: TeamMember[] = [
+  {
+    name: "Marion Trusty",
+    title: "Operational Specialist",
+    initials: "MT",
+    region: "Habersham",
+    email: "marion@lifecareemsga.com",
+  },
+  {
+    name: "Maya Pierce",
+    title: "Operational Specialist",
+    initials: "MP",
+    region: "Valdosta",
+    email: "maya@lifecareems.com",
+  },
+  {
+    name: "Abigail Houston",
+    title: "Operational Specialist",
+    initials: "AH",
+    region: "Gray",
+    email: "abby@lifecareems.com",
+  },
+  {
+    name: "Lonnie Anderson",
+    title: "Operational Specialist",
+    initials: "LA",
+    region: "Byron",
+    email: "lonnie.anderson@lifecareems.com",
+  },
+  {
+    name: "Alex Bell",
+    title: "Operational Specialist",
+    initials: "AB",
+    region: "Columbus & Phenix City",
+    email: "alexandria@lifecareems.com",
+  },
 ];
 
 // Keep backward compat
-export const team: TeamMember[] = [...leadership, ...regionalManagers, ...adminCompliance];
+export const team: TeamMember[] = [
+  ...leadership,
+  ...regionalManagers,
+  ...adminCompliance,
+  ...operationalManagers,
+  ...operationalSpecialists,
+];
 
 export type Testimonial = {
   quote: string;

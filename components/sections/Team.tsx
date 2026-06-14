@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import { leadership, regionalManagers, adminCompliance, TeamMember } from "@/lib/data";
+import { leadership, regionalManagers, adminCompliance, operationalManagers, operationalSpecialists, TeamMember } from "@/lib/data";
 
 function MemberCard({ member }: { member: TeamMember }) {
   return (
@@ -87,10 +87,30 @@ export default function Team() {
         </div>
 
         {/* Admin & Compliance */}
-        <div>
+        <div className="mb-14">
           <h3 className="text-xs font-semibold tracking-widest uppercase text-gray-400 text-center mb-8">Admin &amp; Compliance</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {adminCompliance.map((member) => (
+              <MemberCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+
+        {/* Operational Managers */}
+        <div className="mb-14">
+          <h3 className="text-xs font-semibold tracking-widest uppercase text-gray-400 text-center mb-8">Operational Managers</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+            {operationalManagers.map((member) => (
+              <MemberCard key={member.name} member={member} />
+            ))}
+          </div>
+        </div>
+
+        {/* Operational Specialists */}
+        <div>
+          <h3 className="text-xs font-semibold tracking-widest uppercase text-gray-400 text-center mb-8">Operational Specialists</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+            {operationalSpecialists.map((member) => (
               <MemberCard key={member.name} member={member} />
             ))}
           </div>
