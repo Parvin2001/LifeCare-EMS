@@ -39,7 +39,7 @@ export default function AboutUs() {
               <p className="text-gray-400 text-xs font-semibold uppercase tracking-widest mb-3">Follow Us</p>
               <div className="flex items-center gap-2">
                 <a
-                  href="https://www.facebook.com/LifeCareEMSofGeorgia"
+                  href="https://www.facebook.com/LifeacareEMS/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
@@ -50,7 +50,7 @@ export default function AboutUs() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/lifecareems"
+                  href="https://www.instagram.com/lifecare.ems.ga/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -63,7 +63,7 @@ export default function AboutUs() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/lifecare-ems-of-georgia"
+                  href="https://www.linkedin.com/company/lifecare-ems-of-georgia/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
