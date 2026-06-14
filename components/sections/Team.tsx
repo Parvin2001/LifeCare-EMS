@@ -79,9 +79,11 @@ export default function Team() {
         {/* Regional Managers */}
         <div className="mb-14">
           <h3 className="text-xs font-semibold tracking-widest uppercase text-gray-400 text-center mb-8">Regional Managers</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-4xl mx-auto">
             {regionalManagers.map((member) => (
-              <MemberCard key={member.name} member={member} />
+              <div key={member.name} className="w-full sm:w-72">
+                <MemberCard member={member} />
+              </div>
             ))}
           </div>
         </div>
