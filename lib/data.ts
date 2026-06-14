@@ -80,7 +80,7 @@ export type Stat = {
 
 export const stats: Stat[] = [
   { value: "15+", label: "Years in Service", icon: "Clock" },
-  { value: "60,000+", label: "Transports Done in 2025", icon: "Ambulance" },
+  { value: "60,000+", label: "Transports Completed in 2025", icon: "Ambulance" },
   { value: "50+", label: "Counties Served", icon: "MapPin" },
 ];
 
