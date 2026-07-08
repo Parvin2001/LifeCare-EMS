@@ -150,7 +150,7 @@ export const adminCompliance: TeamMember[] = [
     phone: "(762) 425-4323",
   },
   {
-    name: "Miruan Haney",
+    name: "Miruna Haney",
     title: "Staff Accountant",
     initials: "MH",
     email: "miruanl@temsconsultants.com",
