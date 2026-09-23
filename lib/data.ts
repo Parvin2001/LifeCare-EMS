@@ -290,12 +290,12 @@ export type Location = {
 export const locations: Location[] = [
   {
     name: "Columbus",
-    address: "9249 Veterans Pkwy",
-    city: "Midland",
+    address: "5201 Hamilton Rd",
+    city: "Columbus",
     state: "GA",
-    zip: "31820",
-    lat: 32.5350,
-    lng: -84.9196,
+    zip: "31904",
+    lat: 32.5490,
+    lng: -84.9640,
   },
   {
     name: "Macon",
