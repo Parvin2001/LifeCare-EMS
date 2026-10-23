@@ -78,7 +78,7 @@ export default function Team() {
 
         {/* Regional Managers */}
         <div className="mb-14">
-          <h3 className="text-xs font-semibold tracking-widest uppercase text-gray-400 text-center mb-8">Regional Managers</h3>
+          <h3 className="text-xs font-semibold tracking-widest uppercase text-gray-400 text-center mb-8">Regional Leadership</h3>
           <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-4xl mx-auto">
             {regionalManagers.map((member) => (
               <div key={member.name} className="w-full sm:w-72">
@@ -111,7 +111,7 @@ export default function Team() {
         {/* Operational Specialists */}
         <div>
           <h3 className="text-xs font-semibold tracking-widest uppercase text-gray-400 text-center mb-8">Operational Specialists</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {operationalSpecialists.map((member) => (
               <MemberCard key={member.name} member={member} />
             ))}

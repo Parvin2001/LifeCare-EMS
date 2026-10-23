@@ -104,20 +104,19 @@ export const leadership: TeamMember[] = [
 
 export const regionalManagers: TeamMember[] = [
   {
-    name: "Cal Hardwick",
-    title: "Regional Manager",
-    initials: "CH",
-    region: "Valdosta, Gray",
-    email: "Calvin@lifecareemsga.com",
-    phone: "(470) 998-9419",
-  },
-  {
     name: "Jenn Morgan",
-    title: "Regional Manager",
+    title: "Regional Director",
     initials: "JM",
-    region: "Columbus, Byron, Phenix City",
+    region: "Valdosta, Gray, Byron, Columbus, and Phenix City",
     email: "Jenn@lifecareemsga.com",
     phone: "(762) 425-4319",
+  },
+  {
+    name: "Elise Chanthavongsack",
+    title: "District Manager",
+    initials: "EC",
+    region: "Valdosta, Gray, Byron, Columbus, and Phenix City",
+    email: "Elise@lifecareemsga.com",
   },
 ];
 
@@ -173,11 +172,11 @@ export const operationalManagers: TeamMember[] = [
     email: "dbennett@lifecareemsga.com",
   },
   {
-    name: "Brandy Cason",
+    name: "Abigail Houston",
     title: "Operational Manager",
-    initials: "BC",
+    initials: "AH",
     region: "Gray",
-    email: "brandy@lifecareemsga.com",
+    email: "Abby@lifecareemsga.com",
   },
   {
     name: "Johnae Lucas",
@@ -187,11 +186,11 @@ export const operationalManagers: TeamMember[] = [
     email: "johnae@lifecareemsga.com",
   },
   {
-    name: "Elise Chanthavongsack",
+    name: "Alexandria Bell",
     title: "Operational Manager",
-    initials: "EC",
+    initials: "AB",
     region: "Columbus",
-    email: "elise@lifecareemsga.com",
+    email: "Alexandria@lifecareemsga.com",
   },
 ];
 
@@ -211,25 +210,11 @@ export const operationalSpecialists: TeamMember[] = [
     email: "maya@lifecareems.com",
   },
   {
-    name: "Abigail Houston",
-    title: "Operational Specialist",
-    initials: "AH",
-    region: "Gray",
-    email: "abby@lifecareems.com",
-  },
-  {
     name: "Lonnie Anderson",
     title: "Operational Specialist",
     initials: "LA",
     region: "Byron",
     email: "lonnie.anderson@lifecareems.com",
-  },
-  {
-    name: "Alex Bell",
-    title: "Operational Specialist",
-    initials: "AB",
-    region: "Columbus & Phenix City",
-    email: "alexandria@lifecareems.com",
   },
 ];
 
